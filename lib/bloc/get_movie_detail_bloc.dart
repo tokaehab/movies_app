@@ -1,5 +1,5 @@
-import 'package:movies_app/models/movie_detail_response.dart';
-import 'package:movies_app/repository/movie_repository.dart';
+import '../models/movie_detail_response.dart';
+import '../repository/movie_repository.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:flutter/material.dart';
 

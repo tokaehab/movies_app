@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:movies_app/bloc/get_now_playing_bloc.dart';
-import 'package:movies_app/models/movie.dart';
-import 'package:movies_app/models/movie_response.dart';
-import 'package:movies_app/screens/movie_detail_screen.dart';
-import 'package:movies_app/screens/video_player_screen.dart';
-import 'package:movies_app/widgets/Loading.dart';
+import '../bloc/get_now_playing_bloc.dart';
+import '../models/movie.dart';
+import '../models/movie_response.dart';
+import '../screens/movie_detail_screen.dart';
+import 'Loading.dart';
 import 'package:page_indicator/page_indicator.dart';
-import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class NowPlaying extends StatefulWidget {
   @override

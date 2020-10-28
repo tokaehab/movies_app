@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:movies_app/models/cast_response.dart';
+import '../models/cast_response.dart';
 import 'package:rxdart/rxdart.dart';
 import '../repository/movie_repository.dart';
 

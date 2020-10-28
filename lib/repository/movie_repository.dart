@@ -1,13 +1,13 @@
 import 'package:dio/dio.dart';
-import 'package:movies_app/models/cast_response.dart';
-import 'package:movies_app/models/genre_responses.dart';
-import 'package:movies_app/models/movie_detail_response.dart';
-import 'package:movies_app/models/movie_response.dart';
-import 'package:movies_app/models/person_response.dart';
-import 'package:movies_app/models/video_response.dart';
+import '../models/cast_response.dart';
+import '../models/genre_responses.dart';
+import '../models/movie_detail_response.dart';
+import '../models/movie_response.dart';
+import '../models/person_response.dart';
+import '../models/video_response.dart';
+import 'package:movies_app/api_key.dart';
 
 class MovieRepository {
-  final String apiKey = '4da68b03a9557052d296e5d4450895b4';
   static String mainUrl = 'https://api.themoviedb.org/3';
   final Dio _dio = Dio();
   var getPopularUrl = '$mainUrl/movie/top_rated';

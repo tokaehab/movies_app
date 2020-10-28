@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:movies_app/widgets/genres.dart';
-import 'package:movies_app/widgets/now_playing.dart';
-import 'package:movies_app/widgets/persons_list.dart';
-import 'package:movies_app/widgets/top_movies.dart';
+import '../widgets/genres.dart';
+import '../widgets/now_playing.dart';
+import '../widgets/persons_list.dart';
+import '../widgets/top_movies.dart';
 
 class HomeScreen extends StatefulWidget {
   @override

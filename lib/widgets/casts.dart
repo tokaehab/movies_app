@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:movies_app/bloc/get_casts_bloc.dart';
-import 'package:movies_app/models/cast.dart';
-import 'package:movies_app/models/cast_response.dart';
+import '../bloc/get_casts_bloc.dart';
+import '../models/cast.dart';
+import '../models/cast_response.dart';
 
 import 'Loading.dart';
 

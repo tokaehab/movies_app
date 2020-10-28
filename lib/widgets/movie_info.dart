@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:movies_app/bloc/get_movie_detail_bloc.dart';
-import 'package:movies_app/models/movie_detail.dart';
-import 'package:movies_app/models/movie_detail_response.dart';
+import '../bloc/get_movie_detail_bloc.dart';
+import '../models/movie_detail.dart';
+import '../models/movie_detail_response.dart';
 
 import 'Loading.dart';
 

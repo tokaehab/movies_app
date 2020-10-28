@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:movies_app/bloc/get_genre_bloc.dart';
-import 'package:movies_app/models/genre.dart';
-import 'package:movies_app/models/genre_responses.dart';
-import 'package:movies_app/widgets/Loading.dart';
+import '../bloc/get_genre_bloc.dart';
+import '../models/genre.dart';
+import '../models/genre_responses.dart';
+import 'Loading.dart';
 import 'genres_list.dart';
 
 class GenresScreen extends StatefulWidget {

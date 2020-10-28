@@ -1,5 +1,5 @@
-import 'package:movies_app/models/genre_responses.dart';
-import 'package:movies_app/repository/movie_repository.dart';
+import '../models/genre_responses.dart';
+import '../repository/movie_repository.dart';
 import 'package:rxdart/rxdart.dart';
 
 class GenresListBloc {

@@ -1,6 +1,5 @@
-import 'package:movies_app/models/movie_response.dart';
-import 'package:movies_app/repository/movie_repository.dart';
-
+import '../models/movie_response.dart';
+import '../repository/movie_repository.dart';
 import 'package:rxdart/rxdart.dart';
 
 class NowPlayingBloc {

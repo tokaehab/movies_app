@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:movies_app/screens/movie_detail_screen.dart';
+import '../screens/movie_detail_screen.dart';
 import '../bloc/get_movies_byGenre_bloc.dart';
 import '../models/movie.dart';
 import '../models/movie_response.dart';

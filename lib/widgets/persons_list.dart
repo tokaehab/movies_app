@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:movies_app/bloc/get_person_bloc.dart';
-import 'package:movies_app/models/person.dart';
-import 'package:movies_app/models/person_response.dart';
+import '../bloc/get_person_bloc.dart';
+import '../models/person.dart';
+import '../models/person_response.dart';
 import 'Loading.dart';
 
 class PersonsList extends StatefulWidget {

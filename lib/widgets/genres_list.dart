@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:movies_app/bloc/get_movies_byGenre_bloc.dart';
-import 'package:movies_app/models/genre.dart';
+import '../bloc/get_movies_byGenre_bloc.dart';
+import '../models/genre.dart';
 import 'genre_movies.dart';
 
 class GenresList extends StatefulWidget {

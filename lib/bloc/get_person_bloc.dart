@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
-import 'package:movies_app/models/person_response.dart';
-import 'package:movies_app/repository/movie_repository.dart';
+import '../models/person_response.dart';
+import '../repository/movie_repository.dart';
 import 'package:rxdart/rxdart.dart';
 
 class PersonBloc {

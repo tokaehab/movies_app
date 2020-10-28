@@ -1,4 +1,4 @@
-import 'package:movies_app/models/cast.dart';
+import './cast.dart';
 
 class CastResponse {
   final List<Cast> casts;

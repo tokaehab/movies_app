@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:movies_app/bloc/get_movie_bloc.dart';
-import 'package:movies_app/models/movie.dart';
-import 'package:movies_app/models/movie_response.dart';
-import 'package:movies_app/screens/movie_detail_screen.dart';
-
+import '../bloc/get_movie_bloc.dart';
+import '../models/movie.dart';
+import '../models/movie_response.dart';
+import '../screens/movie_detail_screen.dart';
 import 'Loading.dart';
 
 class TopMovies extends StatefulWidget {
