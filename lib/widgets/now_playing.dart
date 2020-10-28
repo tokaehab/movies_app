@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:movies_app/bloc/get_now_playing_bloc.dart';
 import 'package:movies_app/models/movie.dart';
 import 'package:movies_app/models/movie_response.dart';
+import 'package:movies_app/screens/movie_detail_screen.dart';
+import 'package:movies_app/screens/video_player_screen.dart';
 import 'package:movies_app/widgets/Loading.dart';
 import 'package:page_indicator/page_indicator.dart';
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class NowPlaying extends StatefulWidget {
   @override
@@ -72,10 +75,20 @@ class _NowPlayingState extends State<NowPlaying> {
                     bottom: 0,
                     right: 0,
                     left: 0,
-                    child: Icon(
-                      Icons.play_circle_outline,
-                      size: 50,
+                    child: IconButton(
+                      icon: Icon(Icons.play_circle_outline),
+                      iconSize: 50,
                       color: Theme.of(context).accentColor,
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => MovieDetailScreen(
+                              movie: movies[index],
+                            ),
+                          ),
+                        );
+                      },
                     ),
                   ),
                   Positioned(
