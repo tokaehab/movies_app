@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movies_app/screens/search_screen.dart';
 import '../widgets/genres.dart';
 import '../widgets/now_playing.dart';
 import '../widgets/persons_list.dart';
@@ -17,11 +18,6 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         backgroundColor: Theme.of(context).primaryColor,
         centerTitle: true,
-        leading: IconButton(
-          icon: Icon(Icons.menu),
-          onPressed: () {},
-          color: Colors.white,
-        ),
         title: Text(
           'Movie App',
           style: TextStyle(color: Colors.white),
@@ -29,7 +25,13 @@ class _HomeScreenState extends State<HomeScreen> {
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.search_outlined),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => SearchScreen(),
+                  ));
+            },
             color: Colors.white,
           ),
         ],

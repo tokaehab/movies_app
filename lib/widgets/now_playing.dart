@@ -41,70 +41,61 @@ class _NowPlayingState extends State<NowPlaying> {
             scrollDirection: Axis.horizontal,
             itemCount: movies.take(5).length,
             itemBuilder: (context, index) {
-              return Stack(
-                children: [
-                  Container(
-                    width: MediaQuery.of(context).size.width,
-                    height: MediaQuery.of(context).size.height * 0.5,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.rectangle,
-                      image: DecorationImage(
-                        image: NetworkImage(
-                            'https://image.tmdb.org/t/p/original/' +
-                                movies[index].backPoster),
-                        fit: BoxFit.cover,
+              return GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => MovieDetailScreen(
+                        movie: movies[index],
                       ),
                     ),
-                  ),
-                  Container(
-                    decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                      colors: [
-                        Theme.of(context).primaryColor.withOpacity(1.0),
-                        Theme.of(context).primaryColor.withOpacity(0.0),
-                      ],
-                      begin: Alignment.bottomCenter,
-                      end: Alignment.topCenter,
-                      stops: [0.0, 0.9],
-                    )),
-                  ),
-                  Positioned(
-                    top: 0,
-                    bottom: 0,
-                    right: 0,
-                    left: 0,
-                    child: IconButton(
-                      icon: Icon(Icons.play_circle_outline),
-                      iconSize: 50,
-                      color: Theme.of(context).accentColor,
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => MovieDetailScreen(
-                              movie: movies[index],
+                  );
+                },
+                child: Stack(
+                  children: [
+                    Container(
+                      width: MediaQuery.of(context).size.width,
+                      height: MediaQuery.of(context).size.height * 0.5,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.rectangle,
+                        image: DecorationImage(
+                          image: NetworkImage(
+                              'https://image.tmdb.org/t/p/original/' +
+                                  movies[index].backPoster),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                        colors: [
+                          Theme.of(context).primaryColor.withOpacity(1.0),
+                          Theme.of(context).primaryColor.withOpacity(0.0),
+                        ],
+                        begin: Alignment.bottomCenter,
+                        end: Alignment.topCenter,
+                        stops: [0.0, 0.9],
+                      )),
+                    ),
+                    Positioned(
+                        bottom: 50,
+                        child: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 10),
+                          width: MediaQuery.of(context).size.width * 0.6,
+                          child: Text(
+                            movies[index].title,
+                            style: TextStyle(
+                              height: 1.5,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 16,
                             ),
                           ),
-                        );
-                      },
-                    ),
-                  ),
-                  Positioned(
-                      bottom: 50,
-                      child: Container(
-                        padding: EdgeInsets.symmetric(horizontal: 10),
-                        width: MediaQuery.of(context).size.width * 0.6,
-                        child: Text(
-                          movies[index].title,
-                          style: TextStyle(
-                            height: 1.5,
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 16,
-                          ),
-                        ),
-                      ))
-                ],
+                        ))
+                  ],
+                ),
               );
             },
           ),

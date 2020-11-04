@@ -16,6 +16,7 @@ class MovieRepository {
   var getGenreUrl = '$mainUrl/genre/movie/list';
   var getPersonsUrl = '$mainUrl/trending/person/week';
   var movieUrl = '$mainUrl/movie';
+  var searchUrl = '$mainUrl/search/movie';
 
   Future<MovieResponse> getMovies() async {
     var params = {
@@ -26,6 +27,22 @@ class MovieRepository {
     try {
       Response response =
           await _dio.get(getPopularUrl, queryParameters: params);
+      return MovieResponse.fromJson(response.data);
+    } catch (error, stackTrace) {
+      print('Exception Occured: $error stackTrace: $stackTrace');
+      return MovieResponse.withError('$error');
+    }
+  }
+
+  Future<MovieResponse> getSearchMovies(String movieName) async {
+    var params = {
+      'api_key': apiKey,
+      'language': 'en-US',
+      'page': 1,
+      'query': movieName,
+    };
+    try {
+      Response response = await _dio.get(searchUrl, queryParameters: params);
       return MovieResponse.fromJson(response.data);
     } catch (error, stackTrace) {
       print('Exception Occured: $error stackTrace: $stackTrace');
